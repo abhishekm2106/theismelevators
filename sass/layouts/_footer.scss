@@ -1,0 +1,140 @@
+.footer_whole {
+  padding: 5rem 9rem 2rem;
+
+  background-color: $blue-footer;
+  color: $white;
+  width: 100%;
+
+  @include respond(tab-pot) {
+    //width <= 900px
+    padding: 35rem 1rem 2rem;
+  }
+  .footer_top {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .footer_contacts {
+      @include respond(tab-pot) {
+        //width <= 900px
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      width: 29%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+
+      &_item {
+        display: flex;
+        margin-bottom: 2.8rem;
+        text-decoration: none;
+
+        @include respond(tab-pot) {
+          //width <= 900px
+          width: 100%;
+          text-align: center;
+          flex-direction: column;
+        }
+
+        .fas {
+          font-size: 2.8rem;
+          margin-right: 1rem;
+          display: block;
+          text-decoration: none;
+          color: $white;
+          @include respond(tab-pot) {
+            //width <= 900px
+            margin-bottom: 1rem;
+          }
+        }
+
+        &_text {
+          font-size: 1.5rem;
+          font-family: $para-font-family;
+          line-height: 2rem;
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+
+    .footer_list {
+      @include respond(tab-pot) {
+        //width <= 900px
+        width: 30%;
+        text-align: center;
+      }
+
+      // @include respond(phone){  //width <= 900px
+      //     width: 100%;
+      //     text-align: center;
+      // }
+
+      list-style: none;
+      width: 15%;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: flex-end;
+
+      &_heading {
+        font-family: $heading-font-family;
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
+        font-weight: 100;
+      }
+
+      &_item {
+        margin-bottom: 1.5rem;
+
+        &_link {
+          text-decoration: none;
+          font-family: $para-font-family;
+          font-size: 1.4rem;
+          color: $white;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  hr {
+    opacity: 0.2;
+    height: 2px;
+  }
+
+  .footer_bottom {
+    justify-content: flex-start;
+    margin-top: 2rem;
+    .copy {
+      margin-right: auto;
+      font-family: $para-font-family;
+      font-size: 1.2rem;
+    }
+
+    a {
+      font-family: $para-font-family;
+      font-size: 1.3rem;
+      color: $white;
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 6rem;
+
+        @include respond(phone) {
+          //width <= 900px
+          margin-right: 1rem;
+        }
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

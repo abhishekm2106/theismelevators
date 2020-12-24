@@ -1,0 +1,482 @@
+@import "../abstract/functions";
+@import "../abstract/mixins";
+@import "../abstract/variables";
+
+@import "../base/animation";
+@import "../base/base";
+@import "../base/typography";
+@import "../base/utilities";
+
+@import "../components/button";
+@import "../components/covered-card";
+@import "../components/service-card";
+@import "../components/plan-card";
+@import "../components/client-card";
+@import "../components/form";
+
+@import "../layouts/footer";
+@import "../layouts/navbar";
+@import "../layouts/flexrow";
+
+// .header-image{
+//     width: 100%;
+// }
+
+.head-video {
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 101.5vh;
+  width: 100%;
+  background-attachment: fixed;
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: -300;
+    background-color: $blue-dark;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .slide.current {
+    opacity: 1;
+  }
+
+  .slide .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: $heading-font-family;
+    opacity: 0;
+    min-width: 600px;
+    background-color: rgba($white, 0.7);
+    color: $blue-dark;
+    padding: 4.2rem;
+    transition: all 1s ease-in-out 1s;
+    border-radius: 2px;
+  }
+
+  .slide .content h1 {
+    font-size: 4.2rem;
+  }
+
+  .slide.current .content {
+    opacity: 1;
+    // transform: translateX(600px);
+  }
+
+  .buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 0rem;
+    border-radius: 50% 0 0 50%;
+  }
+
+  .buttons button#prev {
+    position: absolute;
+    top: 50%;
+    left: 0rem;
+    border-radius: 0 50% 50% 0;
+  }
+
+  .buttons button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    outline: none;
+    transition: all 0.5s;
+  }
+
+  .buttons button:hover {
+    background-color: $white;
+    color: $green;
+  }
+
+  // @media (max-width: 500px) {
+  //   .slide .content {
+  //     bottom: -300px;
+  //     left: 0;
+  //     width: 100%;
+  //   }
+
+  //   .slide.current .content {
+  //     transform: translateY(-300px);
+  //   }
+  // }
+
+  /* Backgorund Images */
+
+  .slide:first-child {
+    background: url("../../images/header/header9.jpg") no-repeat center
+      top/cover;
+  }
+  .slide:nth-child(2) {
+    background: url("../../images/header/header1.jpg") no-repeat center
+      top/cover;
+  }
+  .slide:nth-child(3) {
+    background: url("../../images/header/header10.jpg") no-repeat center
+      top/cover;
+  }
+  .slide:nth-child(4) {
+    background: url("../../images/header/header7.jpg") no-repeat center
+      top/cover;
+  }
+  .slide:nth-child(5) {
+    background: url("../../images/header/header8.jpg") no-repeat center
+      top/cover;
+  }
+  // .slide:nth-child(6) {
+  //   background: url("https://source.unsplash.com/ggZuL3BTSJU/1600x900")
+  //     no-repeat center center/cover;
+  // }
+
+  @include respond(tab-pot) {
+    //width <= 900px
+    background-position: center top;
+    height: 70vh;
+  }
+
+  @include respond(phone) {
+  }
+}
+
+.covered {
+  position: relative;
+  margin-top: -1rem;
+  background-image: linear-gradient(to right, $blue-light, $green);
+  text-align: center;
+  padding: 8rem 4rem 23rem;
+  z-index: 50;
+  .find_out {
+    border: none;
+    position: absolute;
+    color: $white;
+    font-size: 1.3rem;
+    font-family: $para-font-family;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    left: 50%;
+    top: 0rem;
+    height: 3.4rem;
+    top: -3.4rem;
+    transform: translate(-50%);
+    background-color: $blue-dark;
+    padding: 1.2rem 2.5rem;
+    border-radius: 3px 3px 0 0;
+    text-decoration: none;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    .fas {
+      margin-left: 0.5rem;
+      font-size: 2.2rem;
+      line-height: 0.2rem;
+    }
+  }
+
+  // .whitebox {
+  //   width: 100%;
+  //   height: 40rem;
+  //   position: absolute;
+  //   bottom: -40rem;
+  //   left: 0;
+  //   z-index: -100;
+  //   background-color: $white;
+  // }
+}
+
+.covered_items {
+  margin-top: -15rem;
+  z-index: 100;
+  position: relative;
+
+  @include respond(tab-pot) {
+    //width <= 900px
+    margin-top: -18rem;
+  }
+
+  &_div {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    @include respond(tab-pot) {
+      //width <= 900px
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.high-grade {
+  position: relative;
+  background-color: $white;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    width: 110vw;
+    height: 90rem;
+    position: absolute;
+    bottom: 0;
+    left: -10rem;
+    z-index: -100;
+    background-color: $white;
+
+    @include respond(tab-pot) {
+      height: 180rem;
+      left: -4rem;
+    }
+
+    @include respond(phone) {
+      height: 200rem;
+      left: -2rem;
+    }
+  }
+
+  &_div {
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+  }
+
+  .g1 {
+    position: absolute;
+    width: 65rem;
+    bottom: -25rem;
+    right: 8rem;
+    z-index: -20;
+
+    @include respond(tab-pot) {
+      right: -4rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &_image {
+    width: 50%;
+    background-image: url(../images/construction.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 48rem;
+
+    @include respond(phone) {
+      //width <= 900px
+      width: 100%;
+      order: 2;
+    }
+  }
+
+  &_content {
+    width: 50%;
+    background: rgb(46, 96, 139);
+    background: linear-gradient(
+      90deg,
+      rgba(46, 96, 139, 0.9) 0%,
+      rgba(28, 162, 151, 0.9) 100%
+    );
+    padding: 6rem 6rem 4rem;
+
+    @include respond(phone) {
+      //width <= 900px
+      width: 100%;
+      order: 1;
+    }
+  }
+}
+
+.modern {
+  position: relative;
+  width: 100%;
+
+  &_img {
+    width: 100%;
+  }
+
+  &_head {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    font-size: 7rem;
+    letter-spacing: 1px;
+    line-height: 6rem;
+
+    @include respond(tab-pot) {
+      //width <= 900px
+      font-size: 5rem;
+      line-height: 4rem;
+    }
+
+    @include respond(phone) {
+      //width <= 900px
+      font-size: 3.8rem;
+      line-height: 3rem;
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+  }
+
+  &_btn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .g1 {
+    position: absolute;
+    width: 65rem;
+    bottom: -35rem;
+    right: -10rem;
+    z-index: -20;
+    transform: rotate(5deg);
+
+    @include respond(tab-pot) {
+      right: -22rem;
+      bottom: -40rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+
+.plan {
+  position: relative;
+
+  .row {
+    justify-content: space-around;
+
+    @include respond(tab-pot) {
+      //width <= 900px
+      justify-content: space-between;
+    }
+
+    @include respond(phone) {
+      justify-content: center;
+    }
+  }
+
+  .g1 {
+    position: absolute;
+    width: 60rem;
+    bottom: -20rem;
+    left: -20rem;
+    z-index: -20;
+  }
+}
+
+.client {
+  background-image: linear-gradient(
+      90deg,
+      rgba(49, 87, 121, 0.7) 0%,
+      rgba(28, 162, 151, 0.7) 100%
+    ),
+    url(../images/clients/client-bg.jpg);
+  background-size: cover;
+  background-position: top;
+  padding: 6rem 10rem 38rem;
+
+  @include respond(tab-pot) {
+    padding: 6rem 4rem 38rem;
+  }
+
+  .row {
+    @include respond(phone) {
+      justify-content: center;
+    }
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .para {
+    text-align: center;
+  }
+}
+
+.contact {
+  margin-top: -30rem;
+  margin-bottom: -30rem;
+
+  &_div {
+    width: 75%;
+    margin-left: auto;
+    display: flex;
+
+    @include respond(tab-pot) {
+      width: 85%;
+    }
+
+    @include respond(phone) {
+      margin-right: auto;
+    }
+
+    &_form {
+      width: 70%;
+      padding: 4rem 5rem;
+      background-color: #ebf1f5;
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      &_headsm {
+        font-family: $para-font-family;
+        color: $blue-light;
+      }
+
+      &_headlg {
+        font-family: $heading-font-family;
+        font-size: 4rem;
+        color: $blue-footer;
+      }
+
+      .row {
+        .form-group {
+          width: 48%;
+        }
+      }
+    }
+
+    &_img {
+      width: 30%;
+      background-image: url(/images/contact.jpg);
+      background-position: center;
+      background-size: cover;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer_whole {
+  padding: 35rem 9rem 2rem;
+}

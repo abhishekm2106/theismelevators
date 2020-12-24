@@ -1,0 +1,66 @@
+@import "../abstract/functions";
+@import "../abstract/mixins";
+@import "../abstract/variables";
+
+@import "../base/animation";
+@import "../base/base";
+@import "../base/typography";
+@import "../base/utilities";
+
+@import "../components/button";
+// @import "../components/covered-card";
+// @import "../components/service-card";
+// @import "../components/plan-card";
+// @import "../components/client-card";
+// @import "../components/form";
+
+@import "../layouts/footer";
+@import "../layouts/navbar";
+@import "../layouts/flexrow";
+
+.estab {
+  &_img {
+    background-image: linear-gradient(
+        90deg,
+        rgba(49, 87, 121, 0.7) 0%,
+        rgba(28, 162, 151, 0.7) 100%
+      ),
+      url(../../images/about.jpg);
+    height: 30rem;
+    width: 100%;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  &_data {
+    background-color: $white;
+    margin-top: -11rem;
+    padding: 3rem 1rem;
+
+    img {
+      width: 40rem;
+    }
+  }
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.better {
+  &_div {
+    &_data {
+      width: 50%;
+      a {
+        text-decoration: none;
+        color: $blue-light;
+      }
+    }
+
+    &_img {
+      background-image: url(../../images/about3.jpeg);
+      background-size: cover;
+      background-position: center center;
+      width: 40%;
+      height: 30rem;
+    }
+  }
+}

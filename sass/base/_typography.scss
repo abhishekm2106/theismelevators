@@ -1,0 +1,36 @@
+.heading{
+    font-family: $heading-font-family;
+    font-weight: 100;
+    font-size: $heading-font-size;
+    text-transform: uppercase;
+    line-height: 5.5rem;
+
+    &_white{
+        color:$white;
+    }
+
+    &_blue{
+        color:$blue-light;
+    }
+}
+
+.para{
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    &_white{
+        color:$white;
+    }
+
+    &_grey{
+        color: $grey;
+        font-weight: 400;
+    }
+
+    &_border{
+        padding-left: 1rem;
+        border-left: 5px solid $green;
+    }
+}
+

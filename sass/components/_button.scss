@@ -1,0 +1,32 @@
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  }
+
+  &-white {
+    background-color: white;
+    color: $blue-dark;
+  }
+
+  &-blue {
+    background-color: $blue-dark;
+    color: $white;
+  }
+}

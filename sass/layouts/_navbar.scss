@@ -1,0 +1,171 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 3rem;
+  background-color: $blue-dark;
+  display: flex;
+  height: 7rem;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+
+  .logo_image {
+    width: 14rem;
+  }
+
+  .nav-bar {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: $blue-dark;
+    .nav-links {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-family: "Bebas Neue", cursive;
+      position: relative;
+      min-height: 7rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &:hover .nav-links_drop {
+        transform: translate(-50%, 100%);
+        opacity: 1;
+
+        @include respond(phone) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transform: translate(0%, 0%);
+        }
+      }
+
+      @include respond(phone) {
+        min-height: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &_droph {
+        cursor: default;
+      }
+
+      &_drop {
+        list-style: none;
+        position: absolute;
+        z-index: -100;
+        top: -120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $blue-dark;
+        transition: all 0.5s ease-out;
+        opacity: 0.5;
+
+        // padding: 0.5rem 2rem;
+
+        &_links {
+          font-size: 2.2rem;
+          text-align: center;
+          font-weight: 100;
+          padding: 1rem 2.5rem;
+          border-bottom: 1px solid rgba($color: $blue-light, $alpha: 0.2);
+
+          @include respond(phone) {
+            border: none;
+          }
+        }
+
+        @include respond(phone) {
+          position: static;
+          display: none;
+          background-color: $white;
+          color: $blue-dark;
+          border-radius: 2px;
+
+          a {
+            color: $blue-dark !important;
+          }
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 3rem;
+        font-size: 3rem;
+      }
+    }
+
+    @include respond(phone) {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding-bottom: 10rem;
+      background-color: $blue-dark;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: -10;
+      // transform: translateY(-100%);
+      transition: all 0.5s ease;
+    }
+  }
+
+  .active {
+    @include respond(phone) {
+      transform: translateY(100%);
+    }
+  }
+
+  .contact-btn {
+    @include respond(phone) {
+      display: block;
+      position: absolute;
+      margin: 0 auto;
+      bottom: 20rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &_1 {
+      display: none;
+      @include respond(phone) {
+        display: block;
+      }
+    }
+
+    &_2 {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+    @include respond(phone) {
+      display: block;
+
+      .line {
+        height: 3px;
+        width: 25px;
+
+        background-color: $white;
+
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

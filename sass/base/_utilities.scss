@@ -1,0 +1,40 @@
+.mb_s{
+    margin-bottom: 1.4rem;
+}
+
+.mb_m{
+    margin-bottom: 2.5rem;
+}
+
+.mb_l{
+    margin-bottom: 5rem;
+}
+
+.mb_xl{
+    margin-bottom: 10rem;
+}
+
+.margin_x{
+    margin-left: 7rem;
+    margin-right: 7rem;
+
+    @include respond(tab-pot){  //width <= 900px
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    @include respond(phone){  //width <= 900px
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+.wd-md{
+    width: 25rem;
+    text-align: center;
+}
+
+.wd-sm{
+    width: 12rem;
+    text-align: center;
+}
