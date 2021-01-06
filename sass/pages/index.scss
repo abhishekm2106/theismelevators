@@ -423,7 +423,7 @@
 
 .contact {
   margin-top: -30rem;
-  margin-bottom: -30rem;
+  margin-bottom: -33rem;
 
   &_div {
     width: 75%;
@@ -478,5 +478,9 @@
 }
 
 .footer_whole {
-  padding: 35rem 9rem 2rem;
+  padding: 37rem 7rem 2rem;
+  @include respond(tab-pot) {
+    //width <= 900px
+    padding: 35rem 1rem 2rem;
+  }
 }

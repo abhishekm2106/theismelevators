@@ -1,42 +1,44 @@
-.covered_card{
-    display: inline-block;
-    cursor: pointer;
-    padding: 2.5rem 2rem;
-    width: 20%;
-    border-radius: 3px;
-    box-shadow: .2rem 1rem 2rem rgba(0, 0, 0, 0.4);
-    text-align: center;
-    background-color: $white;
-    transition: all .2s;
-    margin-bottom: 2rem;
+.covered_card {
+  display: inline-block;
+  cursor: pointer;
+  padding: 2.5rem 2rem;
+  width: 20%;
+  border-radius: 3px;
+  box-shadow: 0.2rem 1rem 2rem rgba(0, 0, 0, 0.4);
+  text-align: center;
+  background-color: $white;
+  transition: all 0.2s;
+  margin-bottom: 2rem;
+  text-decoration: none;
 
-    @include respond(tab-pot){  //width <= 900px
-        width: 60%;
-        padding: 2.5rem 3rem;
-    }
+  @include respond(tab-pot) {
+    //width <= 900px
+    width: 60%;
+    padding: 2.5rem 3rem;
+  }
 
-    &:hover{
-        transform: translateY(-.4rem);
-        box-shadow: .2rem 1rem 2rem rgba(0, 0, 0, 0.3);
-    }
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0.2rem 1rem 2rem rgba(0, 0, 0, 0.3);
+  }
 
-    &_icon{
-        font-size: 9rem;
-        background: -webkit-linear-gradient($blue-light, $green);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+  &_icon {
+    font-size: 9rem;
+    background: -webkit-linear-gradient($blue-light, $green);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-    &_heading{
-        font-size: 2.5rem;
-        font-family: $heading-font-family;
-        color: $blue-light;
-        letter-spacing: 3px;
-    }
+  &_heading {
+    font-size: 2.5rem;
+    font-family: $heading-font-family;
+    color: $blue-light;
+    letter-spacing: 3px;
+  }
 
-    &_para{
-        font-size: 1.5rem;
-        font-family: 'Roboto', sans-serif;
-    }
+  &_para {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+  }
 }

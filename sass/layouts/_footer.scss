@@ -1,5 +1,5 @@
 .footer_whole {
-  padding: 5rem 9rem 2rem;
+  padding: 5rem 7rem 2rem;
 
   background-color: $blue-footer;
   color: $white;
@@ -7,7 +7,31 @@
 
   @include respond(tab-pot) {
     //width <= 900px
-    padding: 35rem 1rem 2rem;
+    padding: 5rem 1rem 2rem;
+  }
+
+  .fas {
+    font-size: 2.8rem;
+    margin-right: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+    @include respond(tab-pot) {
+      //width <= 900px
+      margin-bottom: 1rem;
+    }
+  }
+
+  .fab {
+    font-size: 2.8rem;
+    margin-right: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+    @include respond(tab-pot) {
+      //width <= 900px
+      margin-bottom: 1rem;
+    }
   }
   .footer_top {
     width: 100%;
@@ -20,7 +44,7 @@
         text-align: center;
         margin-bottom: 4rem;
       }
-      width: 29%;
+      width: 24%;
       display: flex;
       flex-direction: column;
       margin-top: 1rem;
@@ -37,18 +61,6 @@
           flex-direction: column;
         }
 
-        .fas {
-          font-size: 2.8rem;
-          margin-right: 1rem;
-          display: block;
-          text-decoration: none;
-          color: $white;
-          @include respond(tab-pot) {
-            //width <= 900px
-            margin-bottom: 1rem;
-          }
-        }
-
         &_text {
           font-size: 1.5rem;
           font-family: $para-font-family;
@@ -62,8 +74,9 @@
     .footer_list {
       @include respond(tab-pot) {
         //width <= 900px
-        width: 30%;
+        width: 45%;
         text-align: center;
+        margin-bottom: 5rem;
       }
 
       // @include respond(phone){  //width <= 900px
@@ -72,7 +85,7 @@
       // }
 
       list-style: none;
-      width: 15%;
+      width: 13%;
       // display: flex;
       // flex-direction: column;
       // align-items: flex-end;
@@ -84,6 +97,7 @@
         margin-bottom: 2rem;
         letter-spacing: 1px;
         font-weight: 100;
+        line-height: 3rem;
       }
 
       &_item {
@@ -105,7 +119,7 @@
 
   hr {
     opacity: 0.2;
-    height: 2px;
+    height: 1px;
   }
 
   .footer_bottom {
@@ -122,6 +136,16 @@
       font-size: 1.3rem;
       color: $white;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      .fas {
+        font-size: 2rem;
+      }
+
+      .fab {
+        font-size: 2rem;
+      }
 
       &:not(:last-child) {
         margin-right: 6rem;

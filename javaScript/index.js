@@ -86,3 +86,7 @@ window.addEventListener('scroll',function(){
     
     slider.style.transform = 'translateY(' + scrollp * .65 + 'px)';
 })
+
+
+//----------------------------------------------------------------------------------------------------------
+//jump.js config
