@@ -1,0 +1,43 @@
+@import "../abstract/functions";
+@import "../abstract/mixins";
+@import "../abstract/variables";
+
+@import "../base/animation";
+@import "../base/base";
+@import "../base/typography";
+@import "../base/utilities";
+
+@import "../components/button";
+// @import "../components/covered-card";
+// @import "../components/service-card";
+// @import "../components/plan-card";
+// @import "../components/client-card";
+// @import "../components/form";
+
+@import "../layouts/footer";
+@import "../layouts/navbar";
+@import "../layouts/flexrow";
+
+.customers {
+  margin-top: 12rem;
+
+  .heading {
+    text-align: center;
+  }
+
+  &_logo {
+    &_div {
+      width: 25%;
+      height: 22rem;
+      text-align: center;
+      &_img {
+        width: 50%;
+      }
+
+      @include respond(tab-pot) {
+        width: 50%;
+        height: 18rem;
+      }
+    }
+  }
+}

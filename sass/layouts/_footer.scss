@@ -1,6 +1,7 @@
 .footer_whole {
   padding: 5rem 7rem 2rem;
 
+  text-transform: capitalize;
   background-color: $blue-footer;
   color: $white;
   width: 100%;
@@ -67,6 +68,7 @@
           line-height: 2rem;
           text-decoration: none;
           color: $white;
+          text-transform: none;
         }
       }
     }
@@ -122,9 +124,34 @@
     height: 1px;
   }
 
+  .footer_certificate {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+    &_image {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+
+      &_src {
+        width: 12rem;
+      }
+    }
+  }
+
+  .gem-para {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
   .footer_bottom {
     justify-content: flex-start;
     margin-top: 2rem;
+
     .copy {
       margin-right: auto;
       font-family: $para-font-family;

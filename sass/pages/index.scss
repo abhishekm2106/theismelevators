@@ -66,6 +66,10 @@
     padding: 4.2rem;
     transition: all 1s ease-in-out 1s;
     border-radius: 2px;
+
+    p {
+      font-family: $para-font-family !important;
+    }
   }
 
   .slide .content h1 {
@@ -392,6 +396,7 @@
 }
 
 .client {
+  margin-bottom: -30rem;
   background-image: linear-gradient(
       90deg,
       rgba(49, 87, 121, 0.7) 0%,
@@ -422,7 +427,6 @@
 }
 
 .contact {
-  margin-top: -30rem;
   margin-bottom: -33rem;
 
   &_div {

@@ -1,0 +1,35 @@
+@import "../abstract/functions";
+@import "../abstract/mixins";
+@import "../abstract/variables";
+
+@import "../base/animation";
+@import "../base/base";
+@import "../base/typography";
+@import "../base/utilities";
+
+@import "../components/button";
+// @import "../components/covered-card";
+// @import "../components/service-card";
+// @import "../components/plan-card";
+// @import "../components/client-card";
+// @import "../components/form";
+
+@import "../layouts/footer";
+@import "../layouts/navbar";
+@import "../layouts/flexrow";
+
+.heading {
+  font-size: 3.5rem;
+}
+
+.para {
+  font-size: 1.45rem;
+}
+
+.content {
+  margin-top: 9rem;
+
+  .list {
+    margin-left: 2rem;
+  }
+}
